@@ -63,7 +63,7 @@
 /******/ 	}
 
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "8ec396d5819a5e97774a"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "c29032f05343728de5f6"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 
@@ -29697,6 +29697,8 @@
 			console.log('Welcome!  Fetching your information.... ');
 			FB.api('/me', function (response) {
 				console.log('Successful login for: ' + response.name);
+				console.log(response);
+				alert(response.name);
 				document.getElementById('status').innerHTML = 'Thanks for logging in, ' + response.name + '!';
 			});
 		},
@@ -29759,6 +29761,7 @@
 					{ href: '#', onClick: this.handleClick },
 					'Login'
 				),
+				_react2.default.createElement('div', { id: 'status' }),
 				_react2.default.createElement(_BabaCounter2.default, { counts: this.state.counts, startCountings: this.startCountings, connectedFB: this.connectedFB })
 			);
 		}
