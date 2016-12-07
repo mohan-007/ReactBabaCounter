@@ -7,6 +7,10 @@ var App = React.createClass ({
 			counts : 1
 		}
 	},
+	componentDidMount: function() {
+		FB.getLoginStatus(function(res){connected = res});
+		this.setState({counts : this.state.counts , connected : connected.status})
+	},
 	startCountings : function(){
 
 			setInterval(
@@ -19,10 +23,15 @@ var App = React.createClass ({
 				,1000)
 
 	},
+	connectedFB : function(){
+		FB.getLoginStatus(function(res){connected = res});
+		this.setState({counts : this.state.counts , connected : connected.status})
+	},
    render() {
       return (
          <div>
-            <BabaCounter counts={this.state.counts} startCountings={this.startCountings}></BabaCounter>
+
+         {this.state.connected == "success"}   <BabaCounter counts={this.state.counts} startCountings={this.startCountings} connectedFB = {this.connectedFB}></BabaCounter>
          </div>
       );
    }
