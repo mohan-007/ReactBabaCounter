@@ -63,7 +63,7 @@
 /******/ 	}
 
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "7b93fcb0f48594ffc7cb"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "8ec396d5819a5e97774a"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 
@@ -29659,11 +29659,9 @@
 
 			window.fbAsyncInit = function () {
 				FB.init({
-					appId: '<YOUR_APP_ID>',
-					cookie: true, // enable cookies to allow the server to access
-					// the session
-					xfbml: true, // parse social plugins on this page
-					version: 'v2.1' // use version 2.1
+					appId: '1371129979598590',
+					xfbml: true,
+					version: 'v2.6'
 				});
 
 				// Now that we've initialized the JavaScript SDK, we call
