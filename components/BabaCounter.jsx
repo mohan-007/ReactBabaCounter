@@ -1,6 +1,9 @@
 import React from 'react'
 
 var BabaCounter = React.createClass({
+	componentWillMount: function() {
+		this.props.connectedFB();
+	},
 	render(){
 		return(
 				<div className="Counter" >
