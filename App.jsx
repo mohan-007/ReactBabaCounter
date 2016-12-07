@@ -31,7 +31,7 @@ var App = React.createClass ({
       return (
          <div>
 
-         {this.state.connected == "success"}   <BabaCounter counts={this.state.counts} startCountings={this.startCountings} connectedFB = {this.connectedFB}></BabaCounter>
+         {this.state.connected == "success"}   <BabaCounter status = {this.state.connected} counts={this.state.counts} startCountings={this.startCountings} connectedFB = {this.connectedFB}></BabaCounter>
          </div>
       );
    }
